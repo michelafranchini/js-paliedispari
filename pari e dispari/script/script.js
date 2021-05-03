@@ -49,10 +49,7 @@ console.log(sommaPariDispari);
 
 // dichiara vincitore
 
-if (sceltaPariDispari == "pari" && sommaPariDispari == true) {
-    console.log("hai vinto");
-    document.getElementById("risultato").innerHTML = "Complimenti! Hai vinto"; 
-} else if (sceltaPariDispari == "dispari" && sommaPariDispari == false){
+if ((sceltaPariDispari == "pari" && sommaPariDispari == true) || (sceltaPariDispari == "dispari" && sommaPariDispari == false)) {
     console.log("hai vinto");
     document.getElementById("risultato").innerHTML = "Complimenti! Hai vinto"; 
 } else {
