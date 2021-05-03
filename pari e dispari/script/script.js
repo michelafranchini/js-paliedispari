@@ -9,10 +9,12 @@
 // // scelta pari o dispari
 var sceltaPariDispari = prompt("pari o dispari?"); 
 console.log("hai scelto: " , sceltaPariDispari);
+document.getElementById("pari_dispari").innerHTML = "Hai scelto " + sceltaPariDispari; 
 
 // utente sceglie numero da 1 a 5 
 var numeroUtente = parseInt(prompt("Scegli un numero da 1 a 5")); 
 console.log("Il numero del player è: " , numeroUtente);
+document.getElementById("numero_utente").innerHTML = "Hai scelto " +  numeroUtente;
 
 // generanumero random da 1 a 5 per computer FUNZIONE
 function randomNumber (min, max) {
@@ -23,10 +25,12 @@ function randomNumber (min, max) {
 
 var numeroRandomPc = randomNumber(1, 5); 
 console.log("Il numero del pc è: ", numeroRandomPc);
+document.getElementById("numero_pc").innerHTML = numeroRandomPc;
 
 // sommare num utente e num computer
 var somma = numeroRandomPc + numeroUtente; 
 console.log("la somma tra i due numeri è: " , somma);
+document.getElementById("somma").innerHTML = somma;
 
 // stabilire se somma è pari o dispari FUNZIONE
 function pariODispari (somma) {
@@ -47,8 +51,11 @@ console.log(sommaPariDispari);
 
 if (sceltaPariDispari == "pari" && sommaPariDispari == true) {
     console.log("hai vinto");
+    document.getElementById("risultato").innerHTML = "Complimenti! Hai vinto"; 
 } else if (sceltaPariDispari == "dispari" && sommaPariDispari == false){
     console.log("hai vinto");
+    document.getElementById("risultato").innerHTML = "Complimenti! Hai vinto"; 
 } else {
     console.log("hai perso");
+    document.getElementById("risultato").innerHTML = "Che peccato :( Hai perso"; 
 }
